@@ -5,7 +5,7 @@ extension ASN1Identifier {
     /// - Parameter tagNumber: The tag number for the identifier.
     /// - Returns: The configured `ASN1Identifier`.
     @inlinable
-    static func contextSpecific(_ tagNumber: UInt) -> ASN1Identifier {
+    public static func contextSpecific(_ tagNumber: UInt) -> ASN1Identifier {
         return ASN1Identifier(tagWithNumber: tagNumber, tagClass: .contextSpecific)
     }
 }

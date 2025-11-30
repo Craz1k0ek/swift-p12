@@ -10,7 +10,7 @@ extension DER {
     ///
     /// - returns: The result of `builder` if the element was present, or `nil` if it was not.
     @inlinable
-    static func optionalExplicitlyTagged<T>(
+    public static func optionalExplicitlyTagged<T>(
         _ nodes: inout ASN1NodeCollection.Iterator,
         identifier: ASN1Identifier,
         _ builder: (ASN1Node) throws -> T
