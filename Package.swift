@@ -10,9 +10,15 @@ let package = Package(
             targets: ["SwiftP12"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-asn1", .upToNextMajor(from: "1.0.0"))
+    ],
     targets: [
         .target(
             name: "SwiftP12",
+            dependencies: [
+                .product(name: "SwiftASN1", package: "swift-asn1")
+            ],
             swiftSettings: [
                 .swiftLanguageMode(.v6)
             ]
